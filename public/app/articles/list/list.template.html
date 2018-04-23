@@ -1,0 +1,19 @@
+﻿<div class="container">
+
+<h1>Courses</h1>
+<ul>
+    <li *ngFor="let article of articles">
+        <a [routerLink]="['/articles', article._id]">{{article.title}}</a>
+        <br>
+        <small>{{article.created}}/{{article.creator.fullName}}</small>
+        <p><b>{{article.content}}</b></p>
+        <p><b>Semester: </b><i>{{article.semester}}</i><br/>
+            <b>Section: </b><i>{{article.section}}</i></p>
+        <hr>
+    </li>
+</ul>
+<div *ngIf="articles && articles.length === 0">
+    No Courses Registered yet, why don't you <a [routerLink]="['/articles/
+create']">create one</a>?
+</div>
+</div>

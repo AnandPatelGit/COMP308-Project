@@ -1,0 +1,27 @@
+﻿<div class="container">
+        <form class ="col s12" (ngSubmit)="signin()" >
+          
+      
+          <table class="stripped">
+              <th>Enter your Credentials</th>
+      
+              <tr>
+                  <td><label>Username:</label></td>
+                  <td><input type="text" [(ngModel)]="credentials.username"
+                     name="studentnumber"></td>
+              <tr>
+              <tr>
+                  <td> <label>Password:</label></td>
+                  <td> <input type="password" [(ngModel)]="credentials.password"
+                     name="password"></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td> <input type="submit" value="Sign In" class="waves-effect waves-light btn"></td>
+              </tr>
+          
+          </table>
+          <span>{{errorMessage}}</span>
+      </form>
+     </div>
+      

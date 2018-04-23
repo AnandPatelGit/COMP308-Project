@@ -1,0 +1,60 @@
+﻿<div class="container">
+        <form class ="col s12" (ngSubmit)="signup()">
+            
+            <table>
+                <th><i class="material-icons">contact_mail</i></th>
+                <th>Enter your details</th>
+            <tr>
+                <td> <label>First Name:</label></td>
+                <td><input type="text" [(ngModel)]="user.firstName"
+                       name="firstName"></td>
+            </tr>
+            <tr>
+                <td><label>Last Name:</label></td>
+                <td><input type="text" [(ngModel)]="user.lastName"
+                       name="lastName"></td>
+            </tr>
+            <tr>
+                <td><label>Address:</label></td>
+                <td><input type="text" [(ngModel)]="user.address"
+                       name="address"></td>
+            </tr>
+            <tr>
+                <td><label>City:</label></td>
+                <td><input type="text" [(ngModel)]="user.city"
+                       name="city"></td>
+            </tr>
+            <tr>
+                <td><label>Phone Number:</label></td>
+                <td><input type="text" [(ngModel)]="user.contact"
+                       name="contact"></td>
+            </tr>
+            <tr>
+                <td><label>Username</label></td>
+                <td><input type="text" [(ngModel)]="user.username"
+                       name="username"></td>
+            </tr>
+            <tr>
+                <td><label>Role:</label></td>
+                <td><input type="text" [(ngModel)]="user.userrole"
+                       name="userrole"></td>
+            </tr>
+            <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="text"  [(ngModel)]="user.email"
+                        name="email"></td>
+            </tr>
+            <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" [(ngModel)]="user.password"
+                       name="password"></td>
+            </tr>
+            <tr>    
+                    <td></td>
+                    <td><input type="submit" value="Sign up"  class="waves-effect waves-light btn" /></td>
+            </tr>
+            </table>
+            <span>{{errorMessage}}</span>
+        </form>
+        </div>
+        

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	 <!-- Compiled and minified CSS -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+	 <!-- Compiled and minified JavaScript -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 
+	
+		<nav>
+			<div class="nav-wrapper">
+				<ul id="nav-mobile" class="brand-logo right">
+				<li><a href="http://localhost:3000/authentication/signin">Login</a></li>
+				<li><a href="http://localhost:3000/authentication/signup">Register</a></li>
+			  </ul>
+			  <ul id="nav-mobile" class="left hide-on-med-and-down">
+				<li><a [routerLink]="['/']">Patient Management System</a></li>
+				<li><a href="">Tips</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Contact Us</a></li>
+			  </ul>
+			</div>
+		  </nav>
+	<base href="/">
+</head>
+<body class="center">
+		<mean-app>
+
+	</mean-app>
+	
+	<script type="text/javascript">
+		window.user = <%= user || 'null' %>;
+	</script>
+	<script src="lib/core-js/client/shim.min.js"></script>
+	<script src="lib/zone.js/dist/zone.js"></script>
+	<script src="lib/reflect-metadata/Reflect.js"></script>
+	<script src="lib/systemjs/dist/system.js"></script>
+	
+	<script src="systemjs.config.js"></script>
+	<script>
+		System.import('app').catch(function(err){ console.error(err); });
+	</script>
+</body>
+</html>

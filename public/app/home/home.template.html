@@ -1,0 +1,33 @@
+﻿<div class="container">
+<div *ngIf="user">
+    <img src="assets/logo.png"  height="133px" width="500px">
+
+    <h1>Hello {{user.firstName}}</h1>
+    <form action="/api/auth/signout">
+        <input type="submit" value="Sign Out" />
+    </form>
+    
+    <ul>
+        <li><a [routerLink]="['/articles']">List Courses</a></li>
+        <li><a [routerLink]="['/articles/create']">Create Course</a></li>
+    </ul>
+</div>
+</div>
+<div *ngIf="!user" class="container"> 
+        <div class="row">
+            <div class="left-align">
+                <div class="col s12">
+                  <div class="card-panel teal">
+                    <span class="white-text"> 
+                      <b>Welcome to Patient Management System</b>
+                      <ul>
+                        <li>This Application allows patients to enter their data daily </li>
+                        <li>This Application allows nurse to enter patient's data that is observed </li>
+                        <li>This Application provides daily tips to the patients</li>
+                      </ul>
+                    </span>
+                  </div>
+                </div>
+            </div>
+              </div>
+    </div>
