@@ -1,26 +1,17 @@
 ﻿<div class="container">
-<img src="assets/logo.png" height="133px" width="500px">
-
+<div class="left-align">
 <section *ngIf="article && article.creator">
-    <h1>{{article.title}}</h1>
+    <h5>{{article.creator.fullName}}'s Report Dated: {{article.created}}</h5>
     <div *ngIf="allowEdit">
         <a [routerLink]="['/articles', article._id, 'edit']">edit</a>
         <button (click)="delete()">delete</button>
     </div>
-    <small>
-        <em>
-            Added on {{article.created}} by {{
-article.creator.
-fullName
-            }}
-        </em>
-    </small>
-    <p>
-            <b>{{article.content}}</b></p>
-            <p><b>Semester: </b><i>{{article.semester}}</i><br/>
-                <b>Section: </b><i>{{article.section}}</i></p>
+        <b>Body Temperature: </b><i>{{article.bodytemperature}} degrees</i><br/>
+            <b>Heart rate: </b><i>{{article.heartrate}} bpm</i><br/>
+            <b>Blood Pressure: </b><i>{{article.bloodpressure}} mm</i><br/>
+            <b>Respiration Rate: </b><i>{{article.respirationrate}} bpm</i><br/>
+            <b>Weight: </b><i>{{article.weight}} kgs</i><br/>
+        <hr/>
 </section>
-<form action="/api/articles">
-    <input type="submit" value="List All the courses"/>
-</form>
+</div>
 </div>

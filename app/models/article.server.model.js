@@ -3,28 +3,33 @@ const Schema = mongoose.Schema;
 const ArticleSchema = new Schema({
     created: {
         type: Date,
-        default: Date.now
-    },
-    title: {
-        type: String,
-        default: '',
-        trim: true,
-        unique: true,
-        required: 'Course Code cannot be blank'
-    },
-    content: {
-        type: String, default: '',
-        trim: true
+        default: Date.now,
     },
     creator: {
         type: Schema.ObjectId,
         ref: 'User'
     },
-    section: {
+    bodytemperature : {
         type: String,
         trim: true
-    }, 
-    semester: {
+    },
+    heartrate: {
+        type: String,
+        trim: true
+    },
+    bloodpressure: {
+        type: String,
+        trim: true
+    },
+    respirationrate: {
+        type: String,
+        trim: true
+    },
+    weight: {
+        type: String,
+        trim: true
+    },
+    dailytips: {
         type: String,
         trim: true
     }

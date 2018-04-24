@@ -1,38 +1,54 @@
 ﻿<div class="container">
-
-<h1>Edit Course</h1>
+<h1>Edit the report</h1>
 <form (ngSubmit)="update()" novalidate>
-    <div>
-        <label for="title">Course Code</label>
-        <div>
-            <input type="text" required [(ngModel)]="article.title"
-                   name="title" placeholder="Title">
-        </div>
-    </div>
-    <div>
-        <label for="content">Content</label>
-        <div>
-            <input type="text" required 
-                      [(ngModel)]="article.content" name="content" placeholder="Content"/>
-        </div>
-    </div>
-    <div>
-        <div><label for="semester">Semester</label></div>
-        <div>
-            <input type="text" 
-                      required [(ngModel)]="article.semester" name="semester" placeholder="Semester"/>
-        </div>
-    </div>  
-    <div>
-        <div><label for="section">Section</label></div>
-        <div>
-            <input type="text" 
-                      required [(ngModel)]="article.section" name="section" placeholder="Section"/>
-        </div>
-    </div>
-    <div>
-        <input type="submit" value="Update">
-    </div>
+        <table>
+                <th>Update your vital signs.</th>
+            <tr>
+                <td><label for="bodytemperature">Body Temperature</label></td>
+                <td>
+                    <input type="text" required [(ngModel)]="article.bodytemperature"
+                           name="title" placeholder="Body Temperature" value="{{article.bodytemperature}}">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="heartrate">Heart Rate</label></td>
+                <td>
+                    <input type="text" 
+                              required [(ngModel)]="article.heartrate" name="heartrate" placeholder="Heart rate" value="{{article.heartrate}}">
+                
+                </td>
+                
+            </tr>
+            <tr>
+                <td><label for="bloodpressure">Blood Pressure</label></td>
+                <td>
+                    <input type="text" 
+                              required [(ngModel)]="article.bloodpressure" name="bodypressure" placeholder="Blood Pressure"
+                              value="{{article.bloodpressure}}"/>
+                </td>
+            </tr>  
+            <tr>
+                <td><label for="respirationrate">Respiration Rate</label></td>
+                <td>
+                    <input type="text" 
+                              required [(ngModel)]="article.respirationrate" name="respirationrate" placeholder="Respiration Rate"
+                              value="{{article.respirationrate}}"/>
+                </td>
+            </tr>  
+            <tr>
+            <tr>
+                <td><label for="weight">Weight</label></td>
+                    <td>
+                        <input type="text" 
+                              required [(ngModel)]="article.weight" name="weight" placeholder="Weight"
+                              value="{{article.weight}}"/>
+                            </td>
+                        </tr>  
+            <tr>
+                <td></td>
+                <td><input type="submit" class="waves-effect waves-light btn"></td>
+            </tr>
+            </table>
     <strong>{{errorMessage}}</strong>
 </form>
 </div>

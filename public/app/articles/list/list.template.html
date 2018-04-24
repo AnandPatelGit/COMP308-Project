@@ -1,19 +1,24 @@
 ﻿<div class="container">
-
-<h1>Courses</h1>
+    <div class="left-align">
+<h1>Vital Signs Reports</h1>
 <ul>
     <li *ngFor="let article of articles">
-        <a [routerLink]="['/articles', article._id]">{{article.title}}</a>
+        <a [routerLink]="['/articles', article._id]"><b>Report Dated: {{article.created}}</b></a>
         <br>
-        <small>{{article.created}}/{{article.creator.fullName}}</small>
-        <p><b>{{article.content}}</b></p>
-        <p><b>Semester: </b><i>{{article.semester}}</i><br/>
-            <b>Section: </b><i>{{article.section}}</i></p>
-        <hr>
+      
+        <b>Created by <i>{{article.creator.fullName}}</i></b><br/>
+        <b>Body Temperature: </b><i>{{article.bodytemperature}} Degrees</i><br/>
+            <b>Heart rate: </b><i>{{article.heartrate}} bpm</i><br/>
+            <b>Blood Pressure: </b><i>{{article.bloodpressure}} mm</i><br/>
+            <b>Respiration Rate: </b><i>{{article.respirationrate}} bpm</i><br/>
+            <b>Weight: </b><i>{{article.weight}} kgs</i><br/>
+        
+        <hr/>
     </li>
 </ul>
+</div>
 <div *ngIf="articles && articles.length === 0">
-    No Courses Registered yet, why don't you <a [routerLink]="['/articles/
-create']">create one</a>?
+    No Reports Found in your History. Do you want <a [routerLink]="['/articles/
+create']">Create one</a>?
 </div>
 </div>

@@ -1,41 +1,50 @@
 ﻿<div class="container">
-<h1>New Course</h1>
+<h1>New Report for Today</h1>
 <form (ngSubmit)="create()" novalidate>
-    <img src="assets/logo.png" height="133px" width="500px">
+    
     <table>
+        <th>Please Enter your vital signs.</th>
     <tr>
-        <td><label for="title">Course Code</label></td>
+        <td><label for="bodytemperature"> Body Temperature</label></td>
         <td>
-            <input type="text" required [(ngModel)]="article.title"
-                   name="title" placeholder="Course Code">
+            <input type="text" required [(ngModel)]="article.bodytemperature"
+                   name="title" placeholder="Body Temperature">
         </td>
     </tr>
     <tr>
-        <td><label for="content">Course Name</label></td>
+        <td><label for="heartrate">Heart Rate</label></td>
         <td>
             <input type="text" 
-                      required [(ngModel)]="article.content" name="content" placeholder="Course Name">
+                      required [(ngModel)]="article.heartrate" name="heartrate" placeholder="Heart rate">
         
         </td>
         
     </tr>
     <tr>
-        <td><label for="semester">Semester</label></td>
+        <td><label for="bloodpressure">Blood Pressure</label></td>
         <td>
             <input type="text" 
-                      required [(ngModel)]="article.semester" name="semester" placeholder="Semester"/>
+                      required [(ngModel)]="article.bloodpressure" name="bodypressure" placeholder="Blood Pressure"/>
         </td>
     </tr>  
     <tr>
-        <td><label for="section">Section</label></td>
+        <td><label for="respirationrate">Respiration Rate</label></td>
         <td>
             <input type="text" 
-                      required [(ngModel)]="article.section" name="section" placeholder="Section"/>
+                      required [(ngModel)]="article.respirationrate" name="respirationrate" placeholder="Respiration Rate"/>
         </td>
     </tr>  
+    <tr>
+    <tr>
+        <td><label for="weight">Weight</label></td>
+            <td>
+                <input type="text" 
+                      required [(ngModel)]="article.weight" name="weight" placeholder="Weight"/>
+                    </td>
+                </tr>  
     <tr>
         <td></td>
-        <td><input type="submit"></td>
+        <td><input type="submit" class="waves-effect waves-light btn"></td>
     </tr>
     </table>
     <strong id="error">{{errorMessage}}</strong>
